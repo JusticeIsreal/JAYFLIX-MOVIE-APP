@@ -1,5 +1,6 @@
 import CardData from "../../dataPage/CardData.js";
 import { FaPlay } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import "./recommend.css";
 
 function Section1() {
@@ -24,9 +25,11 @@ function Section1() {
 const RecommedMovies = ({ id, title, img }) => {
   return (
     <div className="carousel-item ">
-      <div className="imgDL-bg">
-        <FaPlay className="open-icon"/>
-      </div>
+      <Link to={`/dd/${id}`}>
+        <div className="imgDL-bg">
+          <FaPlay className="open-icon" />
+        </div>
+      </Link>
       <img src={img} alt={title} />
       <p>{title}</p>
     </div>

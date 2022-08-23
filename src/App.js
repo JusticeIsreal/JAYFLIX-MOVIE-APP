@@ -3,6 +3,7 @@ import Nav from "../src/components/navbarSection/Nav";
 import Banner from "../src/components/bannerSection/Banner";
 import Section1 from "../src/components/recommended/Section1";
 import DeadEndPage from "../src/components/ErrorPage/DeadEndPage";
+import RecommendDisplay from "./components/pages/defaultPage/RrecommendDisplay";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="Banner" element={<Banner />} />
           <Route path="about" element={<Section1 />} />
+          <Route path="/dd/:id" element={<RecommendDisplay />} />
           <Route path="*" element={<DeadEndPage />} />
         </Routes>
       </Router>

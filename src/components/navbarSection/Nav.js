@@ -12,12 +12,12 @@ function nav() {
       <nav>
         <ul>
           <li className="link">
-            <Link style={{ color: "whitesmoke" }} to="/">
+            <Link style={{ color: "whitesmoke" }} to="/Banner">
               TV Shows
             </Link>
           </li>
           <li>
-            <Link style={{ color: "whitesmoke" }} to="/">
+            <Link style={{ color: "whitesmoke" }} to="/about">
               Movies
             </Link>
           </li>
