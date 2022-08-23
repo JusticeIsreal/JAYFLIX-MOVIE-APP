@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Nav from "../src/components/navbarSection/Nav";
+import Banner from "../src/components/bannerSection/Banner";
+import Section1 from "../src/components/recommended/Section1";
+import DeadEndPage from "../src/components/ErrorPage/DeadEndPage";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Nav />
+        <Banner />
+        <Section1 />
+        <Routes>
+          <Route path="Banner" element={<Banner />} />
+          <Route path="about" element={<Section1 />} />
+          <Route path="*" element={<DeadEndPage />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
