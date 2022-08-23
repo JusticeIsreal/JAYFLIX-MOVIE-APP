@@ -22,7 +22,6 @@ function nav() {
             </Link>
           </li>
           <li>
-            {" "}
             <Link style={{ color: "whitesmoke" }} to="/">
               Category
             </Link>

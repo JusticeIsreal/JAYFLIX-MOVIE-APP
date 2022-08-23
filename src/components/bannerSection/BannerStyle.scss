@@ -29,8 +29,6 @@ $text-Color: rgb(68, 68, 68);
 $special-text-Color: royalblue;
 $special-Color: #4c5eff;
 
-
-
 @mixin flexDisplay($justifyProp, $alignProp, $flexDirection) {
   display: flex;
   justify-content: $justifyProp;
@@ -52,7 +50,7 @@ $special-Color: #4c5eff;
   }
 
   @if $breakpoint==bigphone {
-    @media only screen and (min-width: 800px) {
+    @media only screen and (min-width: 750px) {
       @content;
     }
   }
@@ -64,14 +62,20 @@ $special-Color: #4c5eff;
   }
 }
 
+// banner container
 .each-fade {
-  width: 100vw;
+  width: 100%;
   height: 100%;
   background-color: black;
-  @include responsive(tablet) {
-    // @include flexDisplay(space-between, flex-start, column);
-    height: 70vh;
+  // for small tablets
+  @include responsive(bigphone) {
+    height: 60vh;
   }
+  // for big tablets and above
+  @include responsive(tablet) {
+    height: 65vh;
+  }
+  // banner image
   .image-container {
     width: 100%;
     height: 100%;
@@ -79,22 +83,11 @@ $special-Color: #4c5eff;
       width: 100%;
       height: 100%;
 
+      // for big tablets and above
       @include responsive(tablet) {
-        // @include flexDisplay(space-between, flex-start, column);
-        width: 100vw;
+        width: 100%;
       }
-    }
-
-    h1 {
-      color: rgba(245, 245, 245, 0.549);
-      position: absolute;
-      margin-left: auto;
-      margin-right: auto;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      text-align: center;
-      font-size: 3rem;
     }
   }
 }
+// end of banner style

@@ -50,7 +50,7 @@ $special-Color: #4c5eff;
   }
 
   @if $breakpoint==bigphone {
-    @media only screen and (min-width: 800px) {
+    @media only screen and (min-width: 750px) {
       @content;
     }
   }
@@ -62,44 +62,47 @@ $special-Color: #4c5eff;
   }
 }
 
+// start nav bar section
 .nav-section {
-  // border: 2px solid red;
   position: absolute;
   padding: 5px 10px;
-  width: 100vw;
+  width: 100%;
   top: 0;
   color: whitesmoke;
- 
   z-index: 2;
   @include flexDisplay(space-between, center, row);
+
+  // nav for tablet above
+  @include responsive(bigphone) {
+    padding: 35px 25px;
+  }
+// app icon
   .app-icon {
     font-weight: 900;
     color: red;
   }
 
+  // main nav list
   nav {
     ul {
-      // border: 2px solid red;
       @include flexDisplay(space-between, center, row);
       position: absolute;
       width: 80%;
       top: 50px;
-      position: absolute;
       margin-left: auto;
       margin-right: auto;
       left: 0;
       right: 0;
-      // text-align: center;
-      // margin-top: 50px;
+      @include responsive(bigphone) {
+        width: 50%;
+        top: 45px;
+        bottom: 0;
+      }
 
       .link {
-        // background-color: #fff;
-       color: #fff;
-       
+        color: #fff;
       }
     }
   }
-  @include responsive(tablet) {
-    // @include flexDisplay(space-between, flex-start, column);
-  }
 }
+// end of style

@@ -17,13 +17,18 @@
 }
 
 .each-fade {
-  width: 100vw;
+  width: 100%;
   height: 100%;
   background-color: black;
 }
+@media only screen and (min-width: 750px) {
+  .each-fade {
+    height: 60vh;
+  }
+}
 @media only screen and (min-width: 850px) {
   .each-fade {
-    height: 70vh;
+    height: 65vh;
   }
 }
 .each-fade .image-container {
@@ -36,17 +41,6 @@
 }
 @media only screen and (min-width: 850px) {
   .each-fade .image-container img {
-    width: 100vw;
+    width: 100%;
   }
-}
-.each-fade .image-container h1 {
-  color: rgba(245, 245, 245, 0.549);
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  text-align: center;
-  font-size: 3rem;
 }/*# sourceMappingURL=BannerStyle.css.map */

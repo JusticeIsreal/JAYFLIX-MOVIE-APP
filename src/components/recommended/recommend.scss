@@ -58,7 +58,7 @@ $special-Color: #4c5eff;
   }
 
   @if $breakpoint==bigphone {
-    @media only screen and (min-width: 800px) {
+    @media only screen and (min-width: 750px) {
       @content;
     }
   }
@@ -69,37 +69,67 @@ $special-Color: #4c5eff;
     }
   }
 }
-
+// section 1 style container
 .section-con {
   margin-top: 10px;
   h1 {
-    font: 10px;
+    font-size: 20px;
+    padding: 0 10px;
   }
+
+  // slider container
   .section {
     height: 300px;
-    // margin-top: 10px;
+    margin-top: 10px;
     @include flexDisplay(flex-start, center, row);
     overflow-x: scroll;
     overflow-y: hidden;
 
+    // for tablets above
     @include responsive(tablet) {
-      border: 2px solid red;
-      height: 420px;
-      // @include flexDisplay(space-between, flex-start, column);
+      height: 370px;
     }
 
+    // individual containers
     .carousel-item {
       @include flexDisplay(space-between, center, column);
       padding: 8px;
       min-width: 200px;
       height: 300px;
+      position: relative;
 
-      @include responsive(tablet) {
-        min-width: 300px;
-        min-height: 400px;
+      .imgDL-bg {
+        // border: 2px solid red;
+        @include flexDisplay(center, center, row);
+        position: absolute;
+        right: 0;
+        width: 100%;
+        height: 85%;
+        border-radius: 10px;
+        transition: all 0.3s linear;
+        opacity: 0;
 
-        // @include flexDisplay(space-between, flex-start, column);
+        &:hover {
+          opacity: 1;
+          background-color: rgba(0, 0, 0, 0.504);
+        }
+        .open-icon {
+          @include flexDisplay(center, center, row);
+          margin: 0 auto;
+          font-size: 70px;
+          border: 2px solid whitesmoke;
+          padding: 10px;
+          border-radius: 50%;
+        }
       }
+
+      // for tablets above
+      @include responsive(tablet) {
+        min-width: 250px;
+        min-height: 350px;
+      }
+
+      // style for each image
       img {
         border: 2px solid whitesmoke;
         width: 100%;
