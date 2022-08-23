@@ -11,6 +11,13 @@
   font-family: "Orbitron", sans-serif;
   // font-family: poppins;
 }
+
+body {
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+
 *::-webkit-scrollbar-track {
   background-color: rgba(245, 245, 245, 0);
 }
@@ -21,7 +28,6 @@
 *::-webkit-scrollbar {
   background: none;
 }
-
 $shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.301);
 $border: 2px solid rgb(214, 214, 214);
 $cardsj-bg: rgb(224, 223, 230);
@@ -63,48 +69,42 @@ $special-Color: #4c5eff;
     }
   }
 }
-
-// start nav bar section
-.nav-section {
-  position: absolute;
-  padding: 5px 10px;
-  width: 100%;
-  top: 0;
-  color: whitesmoke;
-  z-index: 2;
-  @include flexDisplay(space-between, center, row);
-
-  // nav for tablet above
-  @include responsive(bigphone) {
-    padding: 35px 25px;
-  }
-// app icon
-  .app-icon {
-    font-weight: 900;
-    color: red;
+// section 1 style container
+.section-con {
+  margin-top: 10px;
+  h1 {
+    font-size: 20px;
+    padding: 0 10px;
   }
 
-  // main nav list
-  nav {
-    ul {
-      @include flexDisplay(space-between, center, row);
-      position: absolute;
-      width: 80%;
-      top: 50px;
-      margin-left: auto;
-      margin-right: auto;
-      left: 0;
-      right: 0;
-      @include responsive(bigphone) {
-        width: 50%;
-        top: 45px;
-        bottom: 0;
-      }
+  // slider container
+  .section {
+    height: 300px;
+    margin-top: 10px;
+    @include flexDisplay(flex-start, center, row);
+    overflow-x: scroll;
+    overflow-y: hidden;
 
-      .link {
-        color: #fff;
-      }
+    // for tablets above
+    @include responsive(tablet) {
+      height: 370px;
     }
   }
 }
-// end of style
+.display {
+  width: 100vw;
+  height: 100vh;
+
+  img {
+    margin: 0 auto;
+    @include flexDisplay(flex-start, center, row);
+    width: 100%;
+    height: 100%;
+    max-width: 1800px;
+    opacity: 0.5;
+    // object-fit: scale-down;
+  }
+  p {
+    position: absolute;
+  }
+}

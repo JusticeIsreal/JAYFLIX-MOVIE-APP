@@ -1,4 +1,4 @@
-import  "./NavStyle.css";
+import "./NavStyle.css";
 import { Link, useParams } from "react-router-dom";
 import { BiSearchAlt } from "react-icons/bi";
 
@@ -6,13 +6,17 @@ function nav() {
   return (
     <div className="nav-section">
       {/* app icon */}
-      <div className="app-icon">JAYFLIX</div>
+      <div className="app-icon">
+        <Link style={{ color: "red" }} to="/">
+          <h1>JAYFLIX</h1>
+        </Link>
+      </div>
 
       {/* navbar begins */}
       <nav>
         <ul>
           <li className="link">
-            <Link style={{ color: "whitesmoke" }} to="/Banner">
+            <Link style={{ color: "whitesmoke" }} to="/">
               TV Shows
             </Link>
           </li>
@@ -22,7 +26,7 @@ function nav() {
             </Link>
           </li>
           <li>
-            <Link style={{ color: "whitesmoke" }} to="/">
+            <Link style={{ color: "whitesmoke" }} to="">
               Category
             </Link>
           </li>
