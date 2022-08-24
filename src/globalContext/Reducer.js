@@ -11,8 +11,6 @@ const reducer = (state, action) => {
     };
   }
   if (action.type === "MENU_TOGGL") {
-    let newArr = CardData.filter((m) => m === "All");
-    console.log(newArr);
     return {
       ...state,
       movie: CardData,
