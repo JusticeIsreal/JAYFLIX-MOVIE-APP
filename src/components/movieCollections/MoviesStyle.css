@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:wght@300&family=Source+Code+Pro:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Orbitron", sans-serif;
+}
+
+body {
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: rgba(245, 245, 245, 0);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar {
+  background: none;
+}
+
+.movies-filter-btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 100%;
+  max-width: 400px;
+}
+.movies-filter-btn button {
+  width: 80px;
+  font-size: 15px;
+  font-weight: 900;
+  color: whitesmoke;
+  background-color: transparent;
+  border: 1px solid rgba(245, 245, 245, 0.426);
+  border-radius: 5px;
+  padding: 5px;
+  transition: all 0.3s linear;
+}
+.movies-filter-btn button:hover {
+  transform: scale(1.2);
+}/*# sourceMappingURL=MoviesStyle.css.map */

@@ -69,41 +69,30 @@ $special-Color: #4c5eff;
     }
   }
 }
-// section 1 style container
-.section-con {
-  margin-top: 10px;
-  h1 {
-    font-size: 20px;
-    padding: 0 10px;
-  }
+.movies-filter-btn {
+  //   border: 2px solid red;
+  @include flexDisplay(space-around, center, row);
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 100%;
+  max-width: 400px;
 
-  // slider container
-  .section {
-    height: 300px;
-    margin-top: 10px;
-    @include flexDisplay(flex-start, center, row);
-    overflow-x: scroll;
-    overflow-y: hidden;
+  button {
+    width: 80px;
+    font-size: 15px;
+    font-weight: 900;
+    color: whitesmoke;
+    background-color: transparent;
+    border: 1px solid rgba(245, 245, 245, 0.426);
+    border-radius: 5px;
+    padding: 5px;
+    transition: all 0.3s linear;
 
-    // for tablets above
-    @include responsive(tablet) {
-      height: 370px;
+    &:hover {
+      transform: scale(1.2);
     }
   }
-}
-.display {
-  width: 100vw;
-  height: 100vh;
-
-  img {
-    margin: 0 auto;
-    @include flexDisplay(flex-start, center, row);
-    width: 100%;
-    height: 100%;
-    max-width: 1800px;
-    opacity: 0.5;
-  }
-  p {
-    position: absolute;
+  @include responsive(tablet) {
   }
 }

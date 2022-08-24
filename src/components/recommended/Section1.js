@@ -25,7 +25,7 @@ function Section1() {
 const RecommedMovies = ({ id, title, img }) => {
   return (
     <div className="carousel-item ">
-      <Link to={`/dd/${id}`}>
+      <Link to={`/dd/${id}`} style={{ color: "whitesmoke" }}>
         <div className="imgDL-bg">
           <FaPlay className="open-icon" />
         </div>
