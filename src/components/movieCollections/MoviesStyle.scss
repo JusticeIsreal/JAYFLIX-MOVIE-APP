@@ -71,14 +71,16 @@ $special-Color: #4c5eff;
 }
 
 .movies-con {
-  border: 2px solid red;
+  // border: 2px solid red;
   @include flexDisplay(space-around, center, column);
+  padding: 0 10px;
+
   // movies filter buttons
   .movies-filter-btn {
     @include flexDisplay(space-around, center, row);
     flex-wrap: wrap;
     margin: 0 auto;
-    margin-top: 40px;
+    margin-top: 30px;
     width: 100%;
     max-width: 400px;
 
@@ -98,6 +100,46 @@ $special-Color: #4c5eff;
       }
     }
     @include responsive(tablet) {
+    }
+  }
+  // search container
+  .search-con {
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 300px;
+
+    .search-form {
+      // border: 2px solid green;
+      @include flexDisplay(space-around, center, row);
+
+      input {
+        padding: 5px;
+        width: 80%;
+        height: 30px;
+        margin: 5px;
+        border-radius: 5px;
+        color: whitesmoke;
+        border: 1px solid rgba(245, 245, 245, 0.418);
+        background-color: black;
+      }
+      button {
+        height: 30px;
+        width: 20%;
+        border-radius: 5px;
+        color: whitesmoke;
+        border: 1px solid rgba(245, 245, 245, 0.418);
+        background-color: black;
+        font-size: 15px;
+        font-weight: 900;
+        transition: all 0.3s linear;
+
+        &:hover {
+          transform: scale(1.1);
+          background-color: rgba(255, 255, 255, 0.292);
+        }
+      }
     }
   }
 }

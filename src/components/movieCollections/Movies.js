@@ -3,25 +3,29 @@ import "../movieCollections/MoviesStyle.css";
 import AppContext from "../../globalContext/AppProvider";
 
 function Movies() {
-  const { dynamicBtn, initialState } = useContext(AppContext);
+  const { dynamicBtn, initialState, toggleMenu } = useContext(AppContext);
 
   return (
     <section className="movies-con">
       <div className="movies-filter-btn">
         {dynamicBtn.map((item, id) => {
-          return <button key={id}>{item}</button>;
+          return (
+            <button key={id} onClick={() => toggleMenu(item)} type="button">
+              {item}
+            </button>
+          );
         })}
       </div>
-      <div>
-        <form>
+      <div className="search-con">
+        <form className="search-form">
           <input type="text" />
-          <button>Search</button>
+          <button type="button">Search</button>
         </form>
       </div>
-      <div>
-        {initialState.movies.map((m) => {
-          return <MoviesCard key={m.id} {...m} />;
-        })}
+      <div className="movies-nain-con">
+        {initialState.movie.map((m) => (
+          <MoviesCard key={m.id} {...m} />
+        ))}
       </div>
     </section>
   );
