@@ -26,7 +26,14 @@ body {
   background: none;
 }
 
-.movies-filter-btn {
+.movies-con {
+  border: 2px solid red;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.movies-con .movies-filter-btn {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -37,7 +44,7 @@ body {
   width: 100%;
   max-width: 400px;
 }
-.movies-filter-btn button {
+.movies-con .movies-filter-btn button {
   width: 80px;
   font-size: 15px;
   font-weight: 900;
@@ -48,6 +55,6 @@ body {
   padding: 5px;
   transition: all 0.3s linear;
 }
-.movies-filter-btn button:hover {
-  transform: scale(1.2);
+.movies-con .movies-filter-btn button:hover {
+  transform: scale(1.1);
 }/*# sourceMappingURL=MoviesStyle.css.map */

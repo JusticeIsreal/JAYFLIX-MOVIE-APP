@@ -69,30 +69,35 @@ $special-Color: #4c5eff;
     }
   }
 }
-.movies-filter-btn {
-  //   border: 2px solid red;
-  @include flexDisplay(space-around, center, row);
-  flex-wrap: wrap;
-  margin: 0 auto;
-  margin-top: 40px;
-  width: 100%;
-  max-width: 400px;
 
-  button {
-    width: 80px;
-    font-size: 15px;
-    font-weight: 900;
-    color: whitesmoke;
-    background-color: transparent;
-    border: 1px solid rgba(245, 245, 245, 0.426);
-    border-radius: 5px;
-    padding: 5px;
-    transition: all 0.3s linear;
+.movies-con {
+  border: 2px solid red;
+  @include flexDisplay(space-around, center, column);
+  // movies filter buttons
+  .movies-filter-btn {
+    @include flexDisplay(space-around, center, row);
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 400px;
 
-    &:hover {
-      transform: scale(1.2);
+    button {
+      width: 80px;
+      font-size: 15px;
+      font-weight: 900;
+      color: whitesmoke;
+      background-color: transparent;
+      border: 1px solid rgba(245, 245, 245, 0.426);
+      border-radius: 5px;
+      padding: 5px;
+      transition: all 0.3s linear;
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
-  }
-  @include responsive(tablet) {
+    @include responsive(tablet) {
+    }
   }
 }

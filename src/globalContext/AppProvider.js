@@ -9,7 +9,6 @@ export const AppContextProvider = ({ children }) => {
     "All",
     ...new Set(CardPage.map((category) => category.category)),
   ];
-  
 
   const newState = (state, action) => {};
   const initialState = {
@@ -18,7 +17,9 @@ export const AppContextProvider = ({ children }) => {
 
   const [state, dispatch] = useReducer(newState, initialState);
   return (
-    <AppContext.Provider value={{ dynamicBtn }}>{children}</AppContext.Provider>
+    <AppContext.Provider value={{ dynamicBtn, initialState }}>
+      {children}
+    </AppContext.Provider>
   );
 };
 
