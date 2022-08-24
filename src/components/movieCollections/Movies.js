@@ -23,7 +23,7 @@ function Movies() {
         </form>
       </div>
       <div className="movies-nain-con">
-        {initialState.movie.map((m) => (
+        {[].map((m) => (
           <MoviesCard key={m.id} {...m} />
         ))}
       </div>
