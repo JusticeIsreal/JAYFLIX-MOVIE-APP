@@ -21,9 +21,14 @@ export const AppContextProvider = ({ children }) => {
   const toggleMenu = (item) => {
     dispatch({ type: "MENU_TOGGLE", payload: item });
   };
+   const toggleMen = () => {
+     dispatch({ type: "MENU_TOGGL" });
+   };
 
   return (
-    <AppContext.Provider value={{ ...state, dynamicBtn, toggleMenu }}>
+    <AppContext.Provider
+      value={{ ...state, dynamicBtn, toggleMenu, toggleMen }}
+    >
       {children}
     </AppContext.Provider>
   );

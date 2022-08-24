@@ -1,12 +1,21 @@
 // useReducer function
+import CardData from "../dataPage/CardData";
 const reducer = (state, action) => {
   // menu toggle control
   if (action.type === "MENU_TOGGLE") {
-    let newArr = state.movie.filter((m) => m.category === action.payload);
+    let newArr = CardData.filter((m) => m.category === action.payload);
     console.log(newArr);
     return {
       ...state,
       movie: newArr,
+    };
+  }
+  if (action.type === "MENU_TOGGL") {
+    let newArr = CardData.filter((m) => m === "All");
+    console.log(newArr);
+    return {
+      ...state,
+      movie: CardData,
     };
   }
   return state;
