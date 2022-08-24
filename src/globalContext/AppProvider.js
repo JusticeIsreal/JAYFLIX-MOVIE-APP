@@ -23,9 +23,7 @@ export const AppContextProvider = ({ children }) => {
   };
 
   return (
-    <AppContext.Provider
-      value={{ ...state, dynamicBtn, initialState, toggleMenu }}
-    >
+    <AppContext.Provider value={{ ...state, dynamicBtn, toggleMenu }}>
       {children}
     </AppContext.Provider>
   );

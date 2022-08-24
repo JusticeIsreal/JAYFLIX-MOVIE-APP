@@ -3,7 +3,7 @@ import "../movieCollections/MoviesStyle.css";
 import AppContext from "../../globalContext/AppProvider";
 
 function Movies() {
-  const { dynamicBtn, initialState, toggleMenu } = useContext(AppContext);
+  const { dynamicBtn, movie, toggleMenu } = useContext(AppContext);
 
   return (
     <section className="movies-con">
@@ -23,7 +23,7 @@ function Movies() {
         </form>
       </div>
       <div className="movies-nain-con">
-        {[].map((m) => (
+        {movie.map((m) => (
           <MoviesCard key={m.id} {...m} />
         ))}
       </div>
