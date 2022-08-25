@@ -108,6 +108,7 @@ body {
   background-color: rgba(255, 255, 255, 0.292);
 }
 .movies-con .movies-nain-con {
+  padding: 10px 0;
   margin-top: 15px;
   width: 100%;
   flex-wrap: wrap;
