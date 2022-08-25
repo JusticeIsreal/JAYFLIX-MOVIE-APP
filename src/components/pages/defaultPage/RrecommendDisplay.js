@@ -32,8 +32,8 @@ function RecommendDisplay() {
           <div className="movie-description">
             <p>{fullDetails.description}</p>
           </div>
-          <div>
-            <ImArrowDown />
+          <div className="movie-download">
+            <ImArrowDown className="download-icon"/>
             <button>Douwnload</button>
           </div>
         </div>

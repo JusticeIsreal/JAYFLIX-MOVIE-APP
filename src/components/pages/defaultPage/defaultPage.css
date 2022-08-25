@@ -111,6 +111,8 @@ body {
 }
 .modal-display .modal-container .movie-content {
   margin-top: auto;
+  height: 30%;
+  position: relative;
 }
 .modal-display .modal-container .movie-content .movie-title {
   margin: 10px 5px 0px 5px;
@@ -119,4 +121,52 @@ body {
   padding: 5px;
   height: 80px;
   overflow-y: scroll;
+}
+.modal-display .modal-container .movie-content .movie-download {
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.modal-display .modal-container .movie-content .movie-download .download-icon {
+  font-size: 30px;
+  padding: 5px;
+  -webkit-animation: rr 3s linear infinite;
+          animation: rr 3s linear infinite;
+}
+.modal-display .modal-container .movie-content .movie-download button {
+  height: 40px;
+  width: 100%;
+  border-radius: 5px;
+  color: whitesmoke;
+  border: 1px solid rgba(245, 245, 245, 0.418);
+  background-color: black;
+  font-size: 15px;
+  font-weight: 900;
+  transition: all 0.3s linear;
+}
+@-webkit-keyframes rr {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes rr {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }/*# sourceMappingURL=defaultPage.css.map */
