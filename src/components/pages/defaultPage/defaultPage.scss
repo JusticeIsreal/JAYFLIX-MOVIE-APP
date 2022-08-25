@@ -62,6 +62,11 @@ $special-Color: #4c5eff;
       @content;
     }
   }
+  @if $breakpoint==landscape {
+    @media (orientation: landscape) {
+      @content;
+    }
+  }
 
   @if $breakpoint==desktop {
     @media only screen and (min-width: 1750px) {
@@ -83,12 +88,7 @@ $special-Color: #4c5eff;
     margin-top: 10px;
     @include flexDisplay(flex-start, center, row);
     overflow-x: scroll;
-    overflow-y: hidden;
-
-    // for tablets above
-    @include responsive(tablet) {
-      height: 370px;
-    }
+    // overflow-y: hidden;
   }
 }
 .modal-display {
@@ -111,6 +111,7 @@ $special-Color: #4c5eff;
     border-radius: 20px;
     background: rgba(0, 0, 0, 0.72);
     border: 1px solid rgba(245, 245, 245, 0.465);
+    position: relative;
     margin: 0 auto;
     animation: dd 0.4s linear;
 
@@ -118,7 +119,11 @@ $special-Color: #4c5eff;
       height: 90%;
       width: 80%;
     }
-
+    @include responsive(landscape) {
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+    }
     @keyframes dd {
       0% {
         transform: scale(0);
@@ -129,29 +134,33 @@ $special-Color: #4c5eff;
     }
 
     .movie-img {
-      // @include flexDisplay(center, center, column);
-
-      @include responsive(bigphone) {
-        margin: 0 auto;
-        width: 90%;
-      }
       .return-btn {
         color: whitesmoke;
         font-size: 20px;
         margin-left: auto;
         @include responsive(bigphone) {
           margin-left: 100%;
+          font-size: 30px;
+        }
+        @include responsive(landscape) {
+          position: absolute;
+          right: 15px;
+          top: 15px;
         }
       }
 
       @include responsive(bigphone) {
-        // border: 2px solid red;
+        margin: 0 auto;
+        // border: 2px solid green;
         width: 85%;
         max-width: 700px;
         height: 70%;
         max-height: 650px;
       }
-
+      @include responsive(landscape) {
+        // height: auto;
+        width: 50%;
+      }
       img {
         margin: 0 auto;
         border-radius: 20px;
@@ -164,6 +173,10 @@ $special-Color: #4c5eff;
         @include responsive(bigphone) {
           width: 70%;
           height: 90%;
+        }
+        @include responsive(landscape) {
+          width: 80%;
+          height: 100%;
         }
       }
     }

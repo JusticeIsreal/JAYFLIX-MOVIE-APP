@@ -41,12 +41,6 @@ body {
   align-items: center;
   flex-direction: row;
   overflow-x: scroll;
-  overflow-y: hidden;
-}
-@media only screen and (min-width: 850px) {
-  .section-con .section {
-    height: 370px;
-  }
 }
 
 .modal-display {
@@ -70,6 +64,7 @@ body {
   border-radius: 20px;
   background: rgba(0, 0, 0, 0.72);
   border: 1px solid rgba(245, 245, 245, 0.465);
+  position: relative;
   margin: 0 auto;
   -webkit-animation: dd 0.4s linear;
           animation: dd 0.4s linear;
@@ -78,6 +73,13 @@ body {
   .modal-display .modal-container {
     height: 90%;
     width: 80%;
+  }
+}
+@media (orientation: landscape) {
+  .modal-display .modal-container {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
   }
 }
 @-webkit-keyframes dd {
@@ -96,12 +98,6 @@ body {
     transform: scale(1);
   }
 }
-@media only screen and (min-width: 750px) {
-  .modal-display .modal-container .movie-img {
-    margin: 0 auto;
-    width: 90%;
-  }
-}
 .modal-display .modal-container .movie-img .return-btn {
   color: whitesmoke;
   font-size: 20px;
@@ -110,14 +106,28 @@ body {
 @media only screen and (min-width: 750px) {
   .modal-display .modal-container .movie-img .return-btn {
     margin-left: 100%;
+    font-size: 30px;
+  }
+}
+@media (orientation: landscape) {
+  .modal-display .modal-container .movie-img .return-btn {
+    position: absolute;
+    right: 15px;
+    top: 15px;
   }
 }
 @media only screen and (min-width: 750px) {
   .modal-display .modal-container .movie-img {
+    margin: 0 auto;
     width: 85%;
     max-width: 700px;
     height: 70%;
     max-height: 650px;
+  }
+}
+@media (orientation: landscape) {
+  .modal-display .modal-container .movie-img {
+    width: 50%;
   }
 }
 .modal-display .modal-container .movie-img img {
@@ -136,6 +146,12 @@ body {
   .modal-display .modal-container .movie-img img {
     width: 70%;
     height: 90%;
+  }
+}
+@media (orientation: landscape) {
+  .modal-display .modal-container .movie-img img {
+    width: 80%;
+    height: 100%;
   }
 }
 .modal-display .modal-container .movie-content {
