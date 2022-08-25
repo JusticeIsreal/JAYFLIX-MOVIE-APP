@@ -102,8 +102,9 @@ body {
   flex-wrap: wrap;
   overflow: hidden;
   max-height: 1000px;
+  overflow-y: scroll;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-direction: row;
 }
@@ -120,9 +121,34 @@ body {
   position: relative;
   margin: 5px;
   transition: all 0.2s linear;
+  -webkit-animation: ee 0.4s linear;
+          animation: ee 0.4s linear;
+}
+@-webkit-keyframes ee {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes ee {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 .movies-con .movies-nain-con .movies-nain-con2:hover {
   transform: scale(1.1);
+}
+@media only screen and (min-width: 750px) {
+  .movies-con .movies-nain-con .movies-nain-con2 {
+    width: 150px;
+    height: 250px;
+    margin: 10px;
+  }
 }
 .movies-con .movies-nain-con .movies-nain-con2 img {
   width: 100%;

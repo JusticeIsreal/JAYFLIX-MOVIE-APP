@@ -99,8 +99,6 @@ $special-Color: #4c5eff;
         transform: scale(1.1);
       }
     }
-    @include responsive(tablet) {
-    }
   }
   // search container
   .search-con {
@@ -149,12 +147,15 @@ $special-Color: #4c5eff;
     flex-wrap: wrap;
     overflow: hidden;
     max-height: 1000px;
-    @include flexDisplay(space-around, center, row);
+    overflow-y: scroll;
+    @include flexDisplay(center, center, row);
+
+    // @include responsive(bigphone) {
+    // }
 
     .movies-nain-con2 {
       border: 1px solid rgba(245, 245, 245, 0.405);
       @include flexDisplay(space-between, center, column);
-      // width: 100px;
       border-radius: 5px;
       padding: 8px 5px;
       width: 105px;
@@ -162,11 +163,25 @@ $special-Color: #4c5eff;
       position: relative;
       margin: 5px;
       transition: all 0.2s linear;
-      // object-fit: contain;
+      animation: ee 0.4s linear;
+
+      @keyframes ee {
+        0% {
+          transform: scale(0.5);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
       &:hover {
         transform: scale(1.1);
       }
-
+      @include responsive(bigphone) {
+        width: 150px;
+        height: 250px;
+        margin: 10px;
+      }
       img {
         width: 100%;
         height: 90%;
