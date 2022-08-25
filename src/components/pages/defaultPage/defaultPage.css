@@ -103,7 +103,7 @@ body {
   }
 }
 .modal-display .modal-container .movie-title {
-  margin: 15px 5px;
+  margin: 10px 5px 0px 5px;
 }
 .modal-display .modal-container .movie-description {
   padding: 5px;

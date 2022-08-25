@@ -28,7 +28,10 @@ function RecommendDisplay() {
         <div className="movie-description">
           <p>{fullDetails.description}</p>
         </div>
-        <ImArrowDown />
+        <div>
+          <ImArrowDown />
+          <button>Douwnload</button>
+        </div>
       </div>
     </div>
   );
