@@ -18,19 +18,24 @@ function RecommendDisplay() {
         className="default-bg"
       />
       <div className="modal-container">
-        <Link to="/" className="return-btn">
-          <FaTimes />
-        </Link>
-        <img src={fullDetails.img} alt={fullDetails.title} />
-        <div className="movie-title">
-          <h3>{fullDetails.title}</h3>
+        <div className="movie-img">
+          <Link to="/" className="return-btn">
+            <FaTimes />
+          </Link>
+          <img src={fullDetails.img} alt={fullDetails.title} />
         </div>
-        <div className="movie-description">
-          <p>{fullDetails.description}</p>
-        </div>
-        <div>
-          <ImArrowDown />
-          <button>Douwnload</button>
+
+        <div className="movie-content">
+          <div className="movie-title">
+            <h3>{fullDetails.title}</h3>
+          </div>
+          <div className="movie-description">
+            <p>{fullDetails.description}</p>
+          </div>
+          <div>
+            <ImArrowDown />
+            <button>Douwnload</button>
+          </div>
         </div>
       </div>
     </div>

@@ -74,17 +74,24 @@ body {
   border: 1px solid rgba(245, 245, 245, 0.465);
   margin: 0 auto;
 }
-.modal-display .modal-container .return-btn {
+.modal-display .modal-container .movie-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.modal-display .modal-container .movie-img .return-btn {
   color: whitesmoke;
   font-size: 20px;
+  margin-left: auto;
 }
 @media only screen and (min-width: 750px) {
-  .modal-display .modal-container {
+  .modal-display .modal-container .movie-img {
     width: 80%;
     height: 600px;
   }
 }
-.modal-display .modal-container img {
+.modal-display .modal-container .movie-img img {
   margin: 0 auto;
   border-radius: 20px;
   display: flex;
@@ -97,15 +104,18 @@ body {
   border: 1px solid rgba(245, 245, 245, 0.37);
 }
 @media only screen and (min-width: 750px) {
-  .modal-display .modal-container img {
+  .modal-display .modal-container .movie-img img {
     width: 80%;
     height: 600px;
   }
 }
-.modal-display .modal-container .movie-title {
+.modal-display .modal-container .movie-content {
+  margin-top: auto;
+}
+.modal-display .modal-container .movie-content .movie-title {
   margin: 10px 5px 0px 5px;
 }
-.modal-display .modal-container .movie-description {
+.modal-display .modal-container .movie-content .movie-description {
   padding: 5px;
   height: 80px;
   overflow-y: scroll;
