@@ -32,6 +32,12 @@ body {
   align-items: center;
   flex-direction: column;
   padding: 0 10px;
+  margin-top: 10px;
+}
+@media only screen and (min-width: 750px) {
+  .movies-con {
+    margin-top: 50px;
+  }
 }
 .movies-con .movies-filter-btn {
   display: flex;
@@ -43,6 +49,11 @@ body {
   margin-top: 30px;
   width: 100%;
   max-width: 400px;
+}
+@media only screen and (min-width: 750px) {
+  .movies-con .movies-filter-btn {
+    max-width: 550px;
+  }
 }
 .movies-con .movies-filter-btn button {
   width: 80px;

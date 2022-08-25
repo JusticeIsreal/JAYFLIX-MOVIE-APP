@@ -74,6 +74,11 @@ $special-Color: #4c5eff;
   // border: 2px solid red;
   @include flexDisplay(space-around, center, column);
   padding: 0 10px;
+  margin-top: 10px;
+
+  @include responsive(bigphone) {
+    margin-top: 50px;
+  }
 
   // movies filter buttons
   .movies-filter-btn {
@@ -83,6 +88,10 @@ $special-Color: #4c5eff;
     margin-top: 30px;
     width: 100%;
     max-width: 400px;
+
+    @include responsive(bigphone) {
+      max-width: 550px;
+    }
 
     button {
       width: 80px;
