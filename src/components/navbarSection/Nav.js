@@ -2,7 +2,7 @@ import "./NavStyle.css";
 import { Link, useParams } from "react-router-dom";
 import { BiSearchAlt } from "react-icons/bi";
 
-function nav() {
+function Nav() {
   return (
     <div className="nav-section">
       {/* app icon */}
@@ -46,4 +46,4 @@ function nav() {
   );
 }
 
-export default nav;
+export default Nav;

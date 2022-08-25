@@ -91,19 +91,59 @@ $special-Color: #4c5eff;
     }
   }
 }
-.display {
+.modal-display {
+  @include flexDisplay(center, center, row);
   width: 100vw;
   height: 100vh;
 
-  img {
-    margin: 0 auto;
-    @include flexDisplay(flex-start, center, row);
+  .default-bg {
     width: 100%;
     height: 100%;
-    max-width: 1800px;
-    opacity: 0.5;
-  }
-  p {
     position: absolute;
+    opacity: 0.3;
+  }
+
+  .modal-container {
+    z-index: 3;
+    width: 90%;
+    max-width: 390px;
+    height: 90%;
+    padding: 10px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.72);
+    border: 1px solid rgba(245, 245, 245, 0.465);
+    margin: 0 auto;
+
+    .return-btn {
+      color: whitesmoke;
+      font-size: 20px;
+    }
+    @include responsive(bigphone) {
+      width: 80%;
+      height: 600px;
+    }
+
+    img {
+      margin: 0 auto;
+      border-radius: 20px;
+      @include flexDisplay(flex-start, center, row);
+      width: 100%;
+      height: 70%;
+      max-width: 1800px;
+      border: 1px solid rgba(245, 245, 245, 0.37);
+
+      @include responsive(bigphone) {
+        width: 80%;
+        height: 600px;
+      }
+    }
+    .movie-title {
+      margin: 15px 5px;
+    }
+    .movie-description {
+      padding: 5px;
+      height: 80px;
+      overflow-y: scroll;
+    }
   }
 }

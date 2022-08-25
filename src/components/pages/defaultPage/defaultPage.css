@@ -49,21 +49,64 @@ body {
   }
 }
 
-.display {
+.modal-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   width: 100vw;
   height: 100vh;
 }
-.display img {
+.modal-display .default-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.3;
+}
+.modal-display .modal-container {
+  z-index: 3;
+  width: 90%;
+  max-width: 390px;
+  height: 90%;
+  padding: 10px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.72);
+  border: 1px solid rgba(245, 245, 245, 0.465);
   margin: 0 auto;
+}
+.modal-display .modal-container .return-btn {
+  color: whitesmoke;
+  font-size: 20px;
+}
+@media only screen and (min-width: 750px) {
+  .modal-display .modal-container {
+    width: 80%;
+    height: 600px;
+  }
+}
+.modal-display .modal-container img {
+  margin: 0 auto;
+  border-radius: 20px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
   width: 100%;
-  height: 100%;
+  height: 70%;
   max-width: 1800px;
-  opacity: 0.5;
+  border: 1px solid rgba(245, 245, 245, 0.37);
 }
-.display p {
-  position: absolute;
+@media only screen and (min-width: 750px) {
+  .modal-display .modal-container img {
+    width: 80%;
+    height: 600px;
+  }
+}
+.modal-display .modal-container .movie-title {
+  margin: 15px 5px;
+}
+.modal-display .modal-container .movie-description {
+  padding: 5px;
+  height: 80px;
+  overflow-y: scroll;
 }/*# sourceMappingURL=defaultPage.css.map */

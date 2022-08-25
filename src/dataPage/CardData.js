@@ -5,6 +5,8 @@ const recommendedDB = [
     title: "The Undead",
     pref: "Recommended",
     category: "Romantic",
+    description:
+      "lorem20 bbb njkn ghfhg bjkbl v vhch blkjn, vkhvh hvhvl  h gh v,hvhuvk vhuvk bvbuhvbk vkhvkuhv vkuvvukh kvkgv bvkhuvku vkuv vkuhv hbvughv ",
   },
   {
     id: 2,
@@ -12,6 +14,8 @@ const recommendedDB = [
     title: "GAME WEB",
     pref: "Recommended",
     category: "Action",
+    description:
+      "lorem20 bbb njkn ghfhg bjkbl v vhch blkjn, vkhvh hvhvl  h gh v,hvhuvk vhuvk bvbuhvbk vkhvkuhv vkuvvukh kvkgv bvkhuvku vkuv vkuhv hbvughv ",
   },
   {
     id: 3,
@@ -19,6 +23,8 @@ const recommendedDB = [
     title: "BATMAN",
     pref: "Recommended",
     category: "Scifi",
+    description:
+      "lorem20 bbb njkn ghfhg bjkbl v vhch blkjn, vkhvh hvhvl  h gh v,hvhuvk vhuvk bvbuhvbk vkhvkuhv vkuvvukh kvkgv bvkhuvku vkuv vkuhv hbvughv ",
   },
   {
     id: 4,
@@ -26,6 +32,8 @@ const recommendedDB = [
     title: "STAR WARS",
     pref: "Recommended",
     category: "Romantic",
+    description:
+      "lorem20 bbb njkn ghfhg bjkbl v vhch blkjn, vkhvh hvhvl  h gh v,hvhuvk vhuvk bvbuhvbk vkhvkuhv vkuvvukh kvkgv bvkhuvku vkuv vkuhv hbvughv ",
   },
   {
     id: 5,
@@ -33,6 +41,8 @@ const recommendedDB = [
     title: "RETURNS",
     pref: "Recommended",
     category: "Action",
+    description:
+      "lorem20 bbb njkn ghfhg bjkbl v vhch blkjn, vkhvh hvhvl  h gh v,hvhuvk vhuvk bvbuhvbk vkhvkuhv vkuvvukh kvkgv bvkhuvku vkuv vkuhv hbvughv ",
   },
   {
     id: 6,
@@ -40,6 +50,8 @@ const recommendedDB = [
     title: "I AM LISA",
     pref: "Recommended",
     category: "Romantic",
+    description:
+      "lorem20 bbb njkn ghfhg bjkbl v vhch blkjn, vkhvh hvhvl  h gh v,hvhuvk vhuvk bvbuhvbk vkhvkuhv vkuvvukh kvkgv bvkhuvku vkuv vkuhv hbvughv ",
   },
   {
     id: 7,
@@ -47,6 +59,8 @@ const recommendedDB = [
     title: "I AM LISA",
     pref: "Recommended",
     category: "Scifi",
+    description:
+      "lorem20 bbb njkn ghfhg bjkbl v vhch blkjn, vkhvh hvhvl  h gh v,hvhuvk vhuvk bvbuhvbk vkhvkuhv vkuvvukh kvkgv bvkhuvku vkuv vkuhv hbvughv ",
   },
   {
     id: 8,
@@ -54,6 +68,8 @@ const recommendedDB = [
     title: "I AM LISA",
     pref: "Recommended",
     category: "Action",
+    description:
+      "lorem20 bbb njkn ghfhg bjkbl v vhch blkjn, vkhvh hvhvl  h gh v,hvhuvk vhuvk bvbuhvbk vkhvkuhv vkuvvukh kvkgv bvkhuvku vkuv vkuhv hbvughv ",
   },
   {
     id: 9,
@@ -61,6 +77,8 @@ const recommendedDB = [
     title: "I AM LISA",
     pref: "Recommended",
     category: "Romantic",
+    description:
+      "lorem20 bbb njkn ghfhg bjkbl v vhch blkjn, vkhvh hvhvl  h gh v,hvhuvk vhuvk bvbuhvbk vkhvkuhv vkuvvukh kvkgv bvkhuvku vkuv vkuhv hbvughv ",
   },
   {
     id: 10,
@@ -68,6 +86,8 @@ const recommendedDB = [
     title: "I AM LISA",
     pref: "Recommended",
     category: "Scifi",
+    description:
+      "lorem20 bbb njkn ghfhg bjkbl v vhch blkjn, vkhvh hvhvl  h gh v,hvhuvk vhuvk bvbuhvbk vkhvkuhv vkuvvukh kvkgv bvkhuvku vkuv vkuhv hbvughv ",
   },
   {
     id: 11,
@@ -75,6 +95,8 @@ const recommendedDB = [
     title: "I AM LISA",
     pref: "Recommended",
     category: "Action",
+    description:
+      "lorem20 bbb njkn ghfhg bjkbl v vhch blkjn, vkhvh hvhvl  h gh v,hvhuvk vhuvk bvbuhvbk vkhvkuhv vkuvvukh kvkgv bvkhuvku vkuv vkuhv hbvughv ",
   },
   {
     id: 12,
@@ -82,6 +104,8 @@ const recommendedDB = [
     title: "I AM LISA",
     pref: "Recommended",
     category: "Romantic",
+    description:
+      "lorem20 bbb njkn ghfhg bjkbl v vhch blkjn, vkhvh hvhvl  h gh v,hvhuvk vhuvk bvbuhvbk vkhvkuhv vkuvvukh kvkgv bvkhuvku vkuv vkuhv hbvughv ",
   },
   {
     id: 13,
@@ -89,6 +113,8 @@ const recommendedDB = [
     title: "I AM LISA",
     pref: "Recommended",
     category: "Scifi",
+    description:
+      "lorem20 bbb njkn ghfhg bjkbl v vhch blkjn, vkhvh hvhvl  h gh v,hvhuvk vhuvk bvbuhvbk vkhvkuhv vkuvvukh kvkgv bvkhuvku vkuv vkuhv hbvughv ",
   },
   {
     id: 14,
@@ -96,6 +122,8 @@ const recommendedDB = [
     title: "I AM LISA",
     pref: "Recommended",
     category: "Action",
+    description:
+      "lorem20 bbb njkn ghfhg bjkbl v vhch blkjn, vkhvh hvhvl  h gh v,hvhuvk vhuvk bvbuhvbk vkhvkuhv vkuvvukh kvkgv bvkhuvku vkuv vkuhv hbvughv ",
   },
   {
     id: 15,
@@ -103,6 +131,8 @@ const recommendedDB = [
     title: "I AM LISA",
     pref: "Recommended",
     category: "Romantic",
+    description:
+      "lorem20 bbb njkn ghfhg bjkbl v vhch blkjn, vkhvh hvhvl  h gh v,hvhuvk vhuvk bvbuhvbk vkhvkuhv vkuvvukh kvkgv bvkhuvku vkuv vkuhv hbvughv ",
   },
 ];
 export default recommendedDB;

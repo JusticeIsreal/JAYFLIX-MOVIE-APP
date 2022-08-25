@@ -20,7 +20,6 @@ export const AppContextProvider = ({ children }) => {
   // all functions and states
   const toggleMenu = (item) => {
     dispatch({ type: "MENU_TOGGLE", payload: item });
-
     if (item === "All") {
       dispatch({ type: "MENU_TOGGL" });
     }
