@@ -71,7 +71,10 @@ $special-Color: #4c5eff;
 }
 // section 1 style container
 .section-con {
+  // border: 2px solid green;
   margin-top: 10px;
+    // @include flexDisplay(flex-start, center, row);
+  // height: 600px;
   h1 {
     font-size: 20px;
     padding: 0 10px;
@@ -79,6 +82,7 @@ $special-Color: #4c5eff;
 
   // slider container
   .section {
+    // border: 2px solid blue;
     height: 300px;
     margin-top: 10px;
     @include flexDisplay(flex-start, center, row);
@@ -97,6 +101,7 @@ $special-Color: #4c5eff;
       min-width: 200px;
       height: 300px;
       position: relative;
+      // border: 2px solid red;
       .imgDL-bg {
         // border: 2px solid red;
         @include flexDisplay(center, center, row);
@@ -110,13 +115,13 @@ $special-Color: #4c5eff;
 
         &:hover {
           opacity: 1;
-          background-color: rgba(0, 0, 0, 0.504);
+          background-color: rgba(0, 0, 0, 0.653);
         }
         .open-icon {
           @include flexDisplay(center, center, row);
           margin: 0 auto;
           font-size: 70px;
-          border: 2px solid whitesmoke;
+          border: 1px solid whitesmoke;
           padding: 10px;
           border-radius: 50%;
         }
@@ -124,8 +129,8 @@ $special-Color: #4c5eff;
 
       // for tablets above
       @include responsive(tablet) {
-        min-width: 250px;
-        min-height: 350px;
+        // min-width: 250px;
+        // min-height: 350px;
       }
 
       // style for each image

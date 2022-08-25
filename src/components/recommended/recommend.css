@@ -73,7 +73,7 @@ body {
 }
 .section-con .section .carousel-item .imgDL-bg:hover {
   opacity: 1;
-  background-color: rgba(0, 0, 0, 0.504);
+  background-color: rgba(0, 0, 0, 0.653);
 }
 .section-con .section .carousel-item .imgDL-bg .open-icon {
   display: flex;
@@ -82,15 +82,9 @@ body {
   flex-direction: row;
   margin: 0 auto;
   font-size: 70px;
-  border: 2px solid whitesmoke;
+  border: 1px solid whitesmoke;
   padding: 10px;
   border-radius: 50%;
-}
-@media only screen and (min-width: 850px) {
-  .section-con .section .carousel-item {
-    min-width: 250px;
-    min-height: 350px;
-  }
 }
 .section-con .section .carousel-item img {
   border: 2px solid whitesmoke;
