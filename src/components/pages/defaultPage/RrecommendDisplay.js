@@ -1,9 +1,7 @@
 import CardData from "../../../dataPage/CardData.js";
 import "./defaultPage.css";
 import { Link, useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
-import Home from "../Home.js";
-import { ImArrowDown } from "react-icons/im";
+import { ImDownload } from "react-icons/im";
 import { FaTimes } from "react-icons/fa";
 
 function RecommendDisplay() {
@@ -11,12 +9,15 @@ function RecommendDisplay() {
   let fullDetails = CardData.find((item) => item.id === parseInt(id));
 
   return (
+    // default page main con
     <div className="modal-display">
+      {/* default image */}
       <img
         src={fullDetails.img}
         alt={fullDetails.title}
         className="default-bg"
       />
+      {/* movie details */}
       <div className="modal-container">
         <div className="movie-img">
           <Link to="/" className="return-btn">
@@ -33,12 +34,16 @@ function RecommendDisplay() {
             <p>{fullDetails.description}</p>
           </div>
           <div className="movie-download">
-            <ImArrowDown className="download-icon"/>
-            <button>Douwnload</button>
+            <button>
+              <ImDownload className="download-icon" />
+              Douwnload
+            </button>
           </div>
         </div>
       </div>
+      {/* end of movie details */}
     </div>
+    // end of default page
   );
 }
 

@@ -73,6 +73,24 @@ body {
   background: rgba(0, 0, 0, 0.72);
   border: 1px solid rgba(245, 245, 245, 0.465);
   margin: 0 auto;
+  -webkit-animation: dd 0.4s linear;
+          animation: dd 0.4s linear;
+}
+@-webkit-keyframes dd {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes dd {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 .modal-display .modal-container .movie-img {
   display: flex;
@@ -122,51 +140,27 @@ body {
   height: 80px;
   overflow-y: scroll;
 }
-.modal-display .modal-container .movie-content .movie-download {
-  position: absolute;
-  bottom: 0;
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.modal-display .modal-container .movie-content .movie-description p {
+  font-size: 12px;
+  word-wrap: break-word;
+  word-spacing: 3px;
+  letter-spacing: 1px;
 }
-.modal-display .modal-container .movie-content .movie-download .download-icon {
-  font-size: 30px;
-  padding: 5px;
-  -webkit-animation: rr 3s linear infinite;
-          animation: rr 3s linear infinite;
+.modal-display .modal-container .movie-content .movie-download {
+  width: 50%;
 }
 .modal-display .modal-container .movie-content .movie-download button {
-  height: 40px;
   width: 100%;
-  border-radius: 5px;
+  border-radius: 10px;
   color: whitesmoke;
   border: 1px solid rgba(245, 245, 245, 0.418);
   background-color: black;
   font-size: 15px;
+  padding: 10px 0;
   font-weight: 900;
   transition: all 0.3s linear;
 }
-@-webkit-keyframes rr {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-@keyframes rr {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.modal-display .modal-container .movie-content .movie-download button .download-icon {
+  font-size: 20px;
+  margin: 0 10px;
 }/*# sourceMappingURL=defaultPage.css.map */
