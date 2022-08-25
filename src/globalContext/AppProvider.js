@@ -12,6 +12,7 @@ const dynamicBtn = [
 // initial state of all functions
 const initialState = {
   movie: CardPage,
+  
 };
 
 export const AppContextProvider = ({ children }) => {
@@ -24,6 +25,8 @@ export const AppContextProvider = ({ children }) => {
       dispatch({ type: "MENU_TOGGL" });
     }
   };
+
+ 
 
   return (
     <AppContext.Provider value={{ ...state, dynamicBtn, toggleMenu }}>

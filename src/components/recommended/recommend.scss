@@ -97,7 +97,6 @@ $special-Color: #4c5eff;
       min-width: 200px;
       height: 300px;
       position: relative;
-
       .imgDL-bg {
         // border: 2px solid red;
         @include flexDisplay(center, center, row);

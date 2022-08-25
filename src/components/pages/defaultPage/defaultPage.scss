@@ -106,14 +106,18 @@ $special-Color: #4c5eff;
   .modal-container {
     z-index: 3;
     width: 90%;
-    max-width: 390px;
-    // height: 90%;
+    // max-width: 390px;
     padding: 10px;
     border-radius: 20px;
     background: rgba(0, 0, 0, 0.72);
     border: 1px solid rgba(245, 245, 245, 0.465);
     margin: 0 auto;
     animation: dd 0.4s linear;
+
+    @include responsive(bigphone) {
+      height: 90%;
+      width: 80%;
+    }
 
     @keyframes dd {
       0% {
@@ -125,15 +129,27 @@ $special-Color: #4c5eff;
     }
 
     .movie-img {
-      @include flexDisplay(center, center, column);
+      // @include flexDisplay(center, center, column);
+
+      @include responsive(bigphone) {
+        margin: 0 auto;
+        width: 90%;
+      }
       .return-btn {
         color: whitesmoke;
         font-size: 20px;
         margin-left: auto;
+        @include responsive(bigphone) {
+          margin-left: 100%;
+        }
       }
+
       @include responsive(bigphone) {
-        width: 80%;
-        height: 600px;
+        // border: 2px solid red;
+        width: 85%;
+        max-width: 700px;
+        height: 70%;
+        max-height: 650px;
       }
 
       img {
@@ -146,8 +162,8 @@ $special-Color: #4c5eff;
         border: 1px solid rgba(245, 245, 245, 0.37);
 
         @include responsive(bigphone) {
-          width: 80%;
-          height: 600px;
+          width: 70%;
+          height: 90%;
         }
       }
     }
@@ -157,6 +173,11 @@ $special-Color: #4c5eff;
       height: 30%;
       position: relative;
 
+      @include responsive(bigphone) {
+        width: 80%;
+        margin: 0 auto;
+      }
+
       .movie-title {
         margin: 10px 5px 0px 5px;
       }
@@ -164,15 +185,27 @@ $special-Color: #4c5eff;
         padding: 5px;
         height: 80px;
         overflow-y: scroll;
+
+        @include responsive(bigphone) {
+          width: 90%;
+          height: 100px;
+        }
         p {
-          font-size: 12px;
+          font-size: 11px;
           word-wrap: break-word;
           word-spacing: 3px;
           letter-spacing: 1px;
+
+          @include responsive(bigphone) {
+            font-size: 12px;
+          }
         }
       }
       .movie-download {
         width: 50%;
+        @include responsive(bigphone) {
+          margin-top: 5px;
+        }
 
         button {
           width: 100%;

@@ -66,7 +66,6 @@ body {
 .modal-display .modal-container {
   z-index: 3;
   width: 90%;
-  max-width: 390px;
   padding: 10px;
   border-radius: 20px;
   background: rgba(0, 0, 0, 0.72);
@@ -74,6 +73,12 @@ body {
   margin: 0 auto;
   -webkit-animation: dd 0.4s linear;
           animation: dd 0.4s linear;
+}
+@media only screen and (min-width: 750px) {
+  .modal-display .modal-container {
+    height: 90%;
+    width: 80%;
+  }
 }
 @-webkit-keyframes dd {
   0% {
@@ -91,11 +96,11 @@ body {
     transform: scale(1);
   }
 }
-.modal-display .modal-container .movie-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+@media only screen and (min-width: 750px) {
+  .modal-display .modal-container .movie-img {
+    margin: 0 auto;
+    width: 90%;
+  }
 }
 .modal-display .modal-container .movie-img .return-btn {
   color: whitesmoke;
@@ -103,9 +108,16 @@ body {
   margin-left: auto;
 }
 @media only screen and (min-width: 750px) {
+  .modal-display .modal-container .movie-img .return-btn {
+    margin-left: 100%;
+  }
+}
+@media only screen and (min-width: 750px) {
   .modal-display .modal-container .movie-img {
-    width: 80%;
-    height: 600px;
+    width: 85%;
+    max-width: 700px;
+    height: 70%;
+    max-height: 650px;
   }
 }
 .modal-display .modal-container .movie-img img {
@@ -122,14 +134,20 @@ body {
 }
 @media only screen and (min-width: 750px) {
   .modal-display .modal-container .movie-img img {
-    width: 80%;
-    height: 600px;
+    width: 70%;
+    height: 90%;
   }
 }
 .modal-display .modal-container .movie-content {
   margin-top: auto;
   height: 30%;
   position: relative;
+}
+@media only screen and (min-width: 750px) {
+  .modal-display .modal-container .movie-content {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 .modal-display .modal-container .movie-content .movie-title {
   margin: 10px 5px 0px 5px;
@@ -139,14 +157,30 @@ body {
   height: 80px;
   overflow-y: scroll;
 }
+@media only screen and (min-width: 750px) {
+  .modal-display .modal-container .movie-content .movie-description {
+    width: 90%;
+    height: 100px;
+  }
+}
 .modal-display .modal-container .movie-content .movie-description p {
-  font-size: 12px;
+  font-size: 11px;
   word-wrap: break-word;
   word-spacing: 3px;
   letter-spacing: 1px;
 }
+@media only screen and (min-width: 750px) {
+  .modal-display .modal-container .movie-content .movie-description p {
+    font-size: 12px;
+  }
+}
 .modal-display .modal-container .movie-content .movie-download {
   width: 50%;
+}
+@media only screen and (min-width: 750px) {
+  .modal-display .modal-container .movie-content .movie-download {
+    margin-top: 5px;
+  }
 }
 .modal-display .modal-container .movie-content .movie-download button {
   width: 100%;

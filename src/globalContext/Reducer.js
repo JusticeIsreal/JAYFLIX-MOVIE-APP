@@ -16,6 +16,8 @@ const reducer = (state, action) => {
       movie: CardData,
     };
   }
+
   return state;
 };
+
 export default reducer;
