@@ -33,8 +33,9 @@ function Movies() {
 
 function MoviesCard({ id, title, img, pref }) {
   return (
-    <div>
-      <div>{title}</div>
+    <div className="movies-nain-con2">
+      <img src={img} alt={title} />
+      <p>{title}</p>
     </div>
   );
 }

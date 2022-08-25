@@ -90,9 +90,46 @@ body {
   background-color: black;
   font-size: 15px;
   font-weight: 900;
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
 }
 .movies-con .search-con .search-form button:hover {
   transform: scale(1.1);
   background-color: rgba(255, 255, 255, 0.292);
+}
+.movies-con .movies-nain-con {
+  margin-top: 15px;
+  width: 100%;
+  flex-wrap: wrap;
+  overflow: hidden;
+  max-height: 1000px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+.movies-con .movies-nain-con .movies-nain-con2 {
+  border: 1px solid rgba(245, 245, 245, 0.405);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+  padding: 8px 5px;
+  width: 105px;
+  height: 150px;
+  position: relative;
+  margin: 5px;
+  transition: all 0.2s linear;
+}
+.movies-con .movies-nain-con .movies-nain-con2:hover {
+  transform: scale(1.1);
+}
+.movies-con .movies-nain-con .movies-nain-con2 img {
+  width: 100%;
+  height: 90%;
+  border-radius: 5px;
+}
+.movies-con .movies-nain-con .movies-nain-con2 p {
+  margin-top: 5px;
+  font-size: 10px;
 }/*# sourceMappingURL=MoviesStyle.css.map */
