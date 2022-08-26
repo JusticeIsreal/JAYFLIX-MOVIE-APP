@@ -38,8 +38,38 @@ body {
   padding-bottom: 20px;
   z-index: 5;
   position: fixed;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.94);
   border-radius: 10px;
+  -webkit-animation: ss 0.3s linear;
+          animation: ss 0.3s linear;
+}
+@-webkit-keyframes ss {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes ss {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@media only screen and (min-width: 750px) {
+  .watchList-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    top: 22%;
+    flex-wrap: wrap;
+    max-width: 1300px;
+    height: 75%;
+  }
 }
 .watchList-con .remove-watchlist-con-icon {
   margin-left: 85%;
@@ -48,6 +78,15 @@ body {
   margin-top: -30px;
   background-color: black;
   border-radius: 50%;
+  cursor: pointer;
+}
+@media only screen and (min-width: 750px) {
+  .watchList-con .remove-watchlist-con-icon {
+    margin-left: 45%;
+    top: 24%;
+    position: fixed;
+    font-size: 40px;
+  }
 }
 .watchList-con .watchList-item {
   border: 1px solid rgba(245, 245, 245, 0.405);
@@ -61,9 +100,23 @@ body {
   position: relative;
   margin: 10px;
 }
+@media only screen and (min-width: 750px) {
+  .watchList-con .watchList-item {
+    height: 250px;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 8px;
+  }
+}
 .watchList-con .watchList-item .remove-watchlist-con {
   position: absolute;
   right: 10px;
+  cursor: pointer;
+}
+@media only screen and (min-width: 750px) {
+  .watchList-con .watchList-item .remove-watchlist-con {
+    font-size: 30px;
+  }
 }
 .watchList-con .watchList-item .watchlist-main-con2 {
   display: flex;
@@ -77,6 +130,11 @@ body {
   border-radius: 10px;
   height: 100%;
 }
+@media only screen and (min-width: 750px) {
+  .watchList-con .watchList-item .watchlist-main-con2 .watchlist-img {
+    width: 80%;
+  }
+}
 .watchList-con .watchList-item .watchlist-main-con2 .watchlist-img img {
   width: 100px;
   height: 100%;
@@ -84,9 +142,19 @@ body {
   -o-object-fit: contain;
      object-fit: contain;
 }
+@media only screen and (min-width: 750px) {
+  .watchList-con .watchList-item .watchlist-main-con2 .watchlist-img img {
+    width: 100%;
+  }
+}
 .watchList-con .watchList-item .watchlist-main-con2 .span {
   width: 65%;
   margin: 10px;
+}
+@media only screen and (min-width: 750px) {
+  .watchList-con .watchList-item .watchlist-main-con2 .span {
+    width: 80%;
+  }
 }
 .watchList-con .watchList-item .watchlist-main-con2 .span p {
   height: 100px;
@@ -94,6 +162,18 @@ body {
   padding: 3px;
   font-size: 12px;
 }
+@media only screen and (min-width: 750px) {
+  .watchList-con .watchList-item .watchlist-main-con2 .span p {
+    margin-top: 20px;
+    font-size: 15px;
+  }
+}
 .watchList-con .watchList-item .watchlist-main-con2 .span h3 {
   font-size: 15px;
+}
+@media only screen and (min-width: 750px) {
+  .watchList-con .watchList-item .watchlist-main-con2 .span h3 {
+    margin-top: 20px;
+    font-size: 15px;
+  }
 }/*# sourceMappingURL=watchList.css.map */

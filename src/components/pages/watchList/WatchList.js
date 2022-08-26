@@ -1,25 +1,28 @@
 import "./watchList.css";
 import { Link } from "react-router-dom";
-import { BiAddToQueue } from "react-icons/bi";
 import { FaTimes } from "react-icons/fa";
-import { useReducer, useContext } from "react";
+import { useContext } from "react";
 import AppContext from "../../../globalContext/AppProvider";
 
 function WatchList() {
-  const { watchListCart, removeWatchListModal } = useContext(AppContext);
-  console.log("bj");
+  const { watchListCart,  removeModal, modal } = useContext(AppContext);
+  //   console.log("bj");
   return (
-    <div div className="watchList-con">
-      <FaTimes className="remove-watchlist-con-icon" />
-      {watchListCart.map((item, index) => (
-        <WatchListCart key={index} {...item} />
-      ))}
-    </div>
+    <>
+      {modal && (
+        <div className="watchList-con">
+          <FaTimes className="remove-watchlist-con-icon" onClick={removeModal}/>
+          {watchListCart.map((item, index) => (
+            <WatchListCart key={index} {...item} />
+          ))}
+        </div>
+      )}
+    </>
   );
 }
 
 function WatchListCart({ id, title, img, description }) {
-  const { removeWatchList} = useContext(AppContext);
+  const { removeWatchList } = useContext(AppContext);
 
   return (
     <div className="watchList-item">

@@ -1,5 +1,5 @@
 import React from "react";
-import { createContext, useReducer, useEfffect } from "react";
+import { createContext, useReducer } from "react";
 import CardPage from "../dataPage/CardData";
 import reducer from "./Reducer";
 
@@ -14,7 +14,6 @@ const initialState = {
   movie: CardPage,
   watchListCart: [],
   modal: false,
-
 };
 
 export const AppContextProvider = ({ children }) => {
@@ -37,11 +36,13 @@ export const AppContextProvider = ({ children }) => {
   const removeWatchList = (id) => {
     dispatch({ type: "REMOVE_WATCHLIST", payload: id });
   };
-  // Remove watchlist modal
-  const removeWatchListModal = () => {
-    dispatch({ type: "REMOVE_WATCHLISTMODAL"});
-  };
 
+  const showModal = (id) => {
+    dispatch({ type: "SHOW_MODAL", payload: id });
+  };
+  const removeModal = (id) => {
+    dispatch({ type: "REMOVE_MODAL", payload: id });
+  };
 
   return (
     <AppContext.Provider
@@ -51,7 +52,8 @@ export const AppContextProvider = ({ children }) => {
         toggleMenu,
         addWatchList,
         removeWatchList,
-        removeWatchListModal,
+        showModal,
+        removeModal,
       }}
     >
       {children}

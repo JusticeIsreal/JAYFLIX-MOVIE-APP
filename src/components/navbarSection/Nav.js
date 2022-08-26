@@ -1,12 +1,12 @@
 import "./NavStyle.css";
 import profile_pic from "./profile_pic/profile_pic.jpg";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { BiCameraMovie } from "react-icons/bi";
 import { useContext } from "react";
 import AppContext from "../../globalContext/AppProvider";
 
 function Nav() {
-  const { watchListCart, removeWatchListModal } = useContext(AppContext);
+  const { watchListCart, showModal } = useContext(AppContext);
   return (
     <div className="nav-section">
       {/* app icon */}
@@ -39,7 +39,7 @@ function Nav() {
 
       {/* search and profile image con */}
       <div className="search-profile-con">
-        <div className="watch-con" onClick={removeWatchListModal}>
+        <div className="watch-con" onClick={showModal}>
           <p>{watchListCart.length}</p>
           <BiCameraMovie className="watch-icon" />
         </div>

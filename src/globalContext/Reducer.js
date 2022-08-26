@@ -33,10 +33,16 @@ const reducer = (state, action) => {
       watchListCart: newWatchList,
     };
   }
-  if (action.type === "REMOVE_WATCHLISTMODAL") {
+  if (action.type === "SHOW_MODAL") {
     return {
       ...state,
       modal: true,
+    };
+  }
+  if (action.type === "REMOVE_MODAL") {
+    return {
+      ...state,
+      modal: false,
     };
   }
 
