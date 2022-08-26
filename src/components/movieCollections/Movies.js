@@ -6,7 +6,7 @@ import { useState } from "react";
 import { BiAddToQueue } from "react-icons/bi";
 
 function Movies() {
-  const { dynamicBtn, movie, toggleMenu, initialState } =
+  const { dynamicBtn, movie, toggleMenu} =
     useContext(AppContext);
 
   const [search, setSearch] = useState(" ");

@@ -1,15 +1,24 @@
-import React from "react";
+import "./watchList.css";
 import { useReducer, useContext } from "react";
 import AppContext from "../../../globalContext/AppProvider";
 
 function WatchList() {
   const { watchListCart } = useContext(AppContext);
-  console.log(watchListCart);
+  //   console.log(watchListCart);
   return (
-    <div>
-      {watchListCart.map((item,index) =>  <p key={index}>{item.title}</p>)}
-          
-          fhfdhfhgfhgfgj
+    <div className="watchList-con">
+      {watchListCart.map((item, index) => (
+        <WatchListCart key={index} {...item} />
+      ))}
+    </div>
+  );
+}
+
+function WatchListCart({ id, title, img }) {
+  return (
+    <div className="watchList-item">
+      <img src={img} alt="" />
+      <p>{title}</p>
     </div>
   );
 }

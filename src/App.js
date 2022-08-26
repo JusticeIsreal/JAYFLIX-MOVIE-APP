@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "../src/components/pages/Home";
 import DeadEndPage from "../src/components/ErrorPage/DeadEndPage";
 import RecommendDisplay from "./components/pages/defaultPage/RrecommendDisplay";
+import WatchList from "./components/pages/watchList/WatchList";
 
 function App() {
   return (
