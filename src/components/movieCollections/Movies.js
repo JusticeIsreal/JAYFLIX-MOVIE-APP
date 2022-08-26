@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "../movieCollections/MoviesStyle.css";
 import AppContext from "../../globalContext/AppProvider";
 import { useState } from "react";
+import { BiAddToQueue } from "react-icons/bi";
 
 function Movies() {
   const { dynamicBtn, movie, toggleMenu } = useContext(AppContext);
@@ -51,12 +52,17 @@ function Movies() {
 
 function MoviesCard({ id, title, img, pref }) {
   return (
-    <Link to={`/dd/${id}`} style={{ color: "whitesmoke" }}>
-      <div className="movies-nain-con2">
-        <img src={img} alt={title} />
-        <p>{title}</p>
+    <main className="movies-card-con">
+      <div className="add-watchlist-con">
+        <BiAddToQueue className="add-watchlist-icon" />
       </div>
-    </Link>
+      <Link to={`/dd/${id}`} style={{ color: "whitesmoke" }}>
+        <div className="movies-nain-con2">
+          <img src={img} alt={title} />
+          <p>{title}</p>
+        </div>
+      </Link>
+    </main>
   );
 }
 
