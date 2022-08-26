@@ -70,6 +70,7 @@ $special-Color: #4c5eff;
   width: 100%;
   height: 100%;
   background-color: black;
+  // margin-top: 5rem;
   // for small tablets
   @include responsive(bigphone) {
     height: 60vh;

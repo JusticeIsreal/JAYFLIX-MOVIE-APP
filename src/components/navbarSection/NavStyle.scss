@@ -73,7 +73,7 @@ $special-Color: #4c5eff;
   top: 0;
   color: whitesmoke;
   z-index: 2;
-  background-color: rgba(0, 0, 0, 0.408);
+  background-color: rgba(0, 0, 0, 0.8);
   @include flexDisplay(space-between, center, row);
 
   // nav for tablet above
@@ -88,19 +88,25 @@ $special-Color: #4c5eff;
 
   // main nav list
   nav {
+    // background-color: rgba(0, 0, 0, 0.408);
+
     ul {
-      @include flexDisplay(space-between, center, row);
+      @include flexDisplay(space-around, center, row);
       position: absolute;
-      width: 80%;
+      width: 100%;
       top: 50px;
       margin-left: auto;
       margin-right: auto;
       left: 0;
       right: 0;
+      padding: 5px 0;
+      background-color: rgba(0, 0, 0, 0.8);
+
       @include responsive(bigphone) {
         width: 50%;
         top: 45px;
         bottom: 0;
+        background-color: rgba(0, 0, 0, 0);
       }
 
       .link {
@@ -111,7 +117,41 @@ $special-Color: #4c5eff;
 
   .search-profile-con {
     @include flexDisplay(space-between, center, row);
-    
+
+    .watch-con {
+      @include flexDisplay(center, center, row);
+      border: 1px solid #fff;
+      position: relative;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-right: 20px;
+      @include responsive(bigphone) {
+        width: 40px;
+        height: 40px;
+      }
+      .watch-icon {
+        margin: 0 auto;
+        font-size: 20px;
+
+        @include responsive(bigphone) {
+          font-size: 30px;
+        }
+      }
+
+      p {
+        position: absolute;
+        top: -10px;
+        right: 0;
+        // font-size: 20px;
+        background-color: rgba(255, 255, 255, 0.642);
+        color: black;
+        width: 20px;
+        border-radius: 50%;
+        text-align: center;
+      }
+    }
+
     .profile-img-con {
       border: 1px solid whitesmoke;
       width: 40px;

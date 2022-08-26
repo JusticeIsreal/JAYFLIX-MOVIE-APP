@@ -1,7 +1,7 @@
 import "./NavStyle.css";
 import profile_pic from "./profile_pic/profile_pic.jpg";
 import { Link, useParams } from "react-router-dom";
-import { BiSearchAlt } from "react-icons/bi";
+import { BiCameraMovie } from "react-icons/bi";
 
 function Nav() {
   return (
@@ -36,7 +36,11 @@ function Nav() {
 
       {/* search and profile image con */}
       <div className="search-profile-con">
-        <BiSearchAlt className="search-icon" />
+        <div className="watch-con">
+          <p>0</p>
+          <BiCameraMovie className="watch-icon" />
+        </div>
+
         <div className="profile-img-con">
           <img src={profile_pic} alt="" />
         </div>
