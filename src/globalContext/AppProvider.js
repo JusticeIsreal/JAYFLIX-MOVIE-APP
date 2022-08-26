@@ -12,7 +12,9 @@ const dynamicBtn = [
 // initial state of all functions
 const initialState = {
   movie: CardPage,
-  watchListCart: [{}],
+  watchListCart: [],
+  modal: false,
+
 };
 
 export const AppContextProvider = ({ children }) => {
@@ -26,13 +28,31 @@ export const AppContextProvider = ({ children }) => {
     }
   };
 
+  // add to watch list cart
   const addWatchList = (id) => {
     dispatch({ type: "ADD_WATCHLIST", payload: id });
   };
 
+  // remove from watch list cart
+  const removeWatchList = (id) => {
+    dispatch({ type: "REMOVE_WATCHLIST", payload: id });
+  };
+  // Remove watchlist modal
+  const removeWatchListModal = () => {
+    dispatch({ type: "REMOVE_WATCHLISTMODAL"});
+  };
+
+
   return (
     <AppContext.Provider
-      value={{ ...state, dynamicBtn, toggleMenu, addWatchList }}
+      value={{
+        ...state,
+        dynamicBtn,
+        toggleMenu,
+        addWatchList,
+        removeWatchList,
+        removeWatchListModal,
+      }}
     >
       {children}
     </AppContext.Provider>

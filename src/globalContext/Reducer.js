@@ -19,11 +19,24 @@ const reducer = (state, action) => {
   if (action.type === "ADD_WATCHLIST") {
     let newCart = CardData.filter((film) => film.id === action.payload);
 
-    // console.log([...newCart, ...state.watchListCart]);
-    // console.log({...newCart}, ...state.watchListCart)
     return {
       ...state,
       watchListCart: [...newCart, ...state.watchListCart],
+    };
+  }
+  if (action.type === "REMOVE_WATCHLIST") {
+    let newWatchList = state.watchListCart.filter(
+      (film) => film.id !== action.payload
+    );
+    return {
+      ...state,
+      watchListCart: newWatchList,
+    };
+  }
+  if (action.type === "REMOVE_WATCHLISTMODAL") {
+    return {
+      ...state,
+      modal: true,
     };
   }
 

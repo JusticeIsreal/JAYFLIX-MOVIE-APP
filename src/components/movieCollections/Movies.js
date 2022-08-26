@@ -6,7 +6,7 @@ import { useState } from "react";
 import { BiAddToQueue } from "react-icons/bi";
 
 function Movies() {
-  const { dynamicBtn, movie, toggleMenu} =
+  const { dynamicBtn, movie, toggleMenu, watchListShow } =
     useContext(AppContext);
 
   const [search, setSearch] = useState(" ");
@@ -51,9 +51,9 @@ function Movies() {
   );
 }
 
-function MoviesCard({ id, title, img, pref }) {
-  const { dynamicBtn, movie, toggleMenu, initialState, addWatchList } =
-    useContext(AppContext);
+function MoviesCard({ id, title, img }) {
+  const { addWatchList } = useContext(AppContext);
+  // console.log(addWatchList)
   return (
     <main className="movies-card-con">
       <div className="add-watchlist-con" onClick={() => addWatchList(id)}>
