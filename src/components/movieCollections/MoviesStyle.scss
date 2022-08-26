@@ -71,7 +71,6 @@ $special-Color: #4c5eff;
 }
 
 .movies-con {
-  // border: 2px solid red;
   @include flexDisplay(space-around, center, column);
   padding: 0 10px;
   margin-top: 10px;

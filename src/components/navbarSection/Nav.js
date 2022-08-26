@@ -1,4 +1,5 @@
 import "./NavStyle.css";
+import profile_pic from "./profile_pic/profile_pic.jpg";
 import { Link, useParams } from "react-router-dom";
 import { BiSearchAlt } from "react-icons/bi";
 
@@ -16,19 +17,19 @@ function Nav() {
       <nav>
         <ul>
           <li className="link">
-            <Link style={{ color: "whitesmoke" }} to="/">
+            <a style={{ color: "whitesmoke" }} href="#movies">
               TV Shows
-            </Link>
+            </a>
           </li>
           <li>
-            <Link style={{ color: "whitesmoke" }} to="/about">
+            <a style={{ color: "whitesmoke" }} href="#movies">
               Movies
-            </Link>
+            </a>
           </li>
           <li>
-            <Link style={{ color: "whitesmoke" }} to="">
+            <a style={{ color: "whitesmoke" }} href="#category">
               Category
-            </Link>
+            </a>
           </li>
         </ul>
       </nav>
@@ -37,7 +38,7 @@ function Nav() {
       <div className="search-profile-con">
         <BiSearchAlt className="search-icon" />
         <div className="profile-img-con">
-          <img src="" alt="" />
+          <img src={profile_pic} alt="" />
         </div>
       </div>
       {/* end */}

@@ -10,7 +10,8 @@ function Movies() {
   const [search, setSearch] = useState(" ");
 
   return (
-    <section className="movies-con">
+    <section className="movies-con" id="movies">
+      <h2 style={{ marginRight: "auto", marginTop: "20px" }}>Collections</h2>
       <div className="movies-filter-btn">
         {dynamicBtn.map((item, id) => {
           return (
@@ -20,7 +21,7 @@ function Movies() {
           );
         })}
       </div>
-      <div className="search-con">
+      <div className="search-con" id="category">
         <form className="search-form">
           <input
             type="text"
