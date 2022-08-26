@@ -159,8 +159,8 @@ $special-Color: #4c5eff;
         .add-watchlist-icon {
           margin-left: 80%;
           font-size: 25px;
-          background-color: rgba(222, 10, 10, 0.623);
-          border-radius: 10px;
+          background-color: black;
+          // border-radius: 10px;
 
           @include responsive(bigphone) {
             font-size: 35px;

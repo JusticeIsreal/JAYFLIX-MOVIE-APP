@@ -119,8 +119,7 @@ body {
 .movies-con .movies-nain-con .movies-card-con .add-watchlist-con .add-watchlist-icon {
   margin-left: 80%;
   font-size: 25px;
-  background-color: rgba(222, 10, 10, 0.623);
-  border-radius: 10px;
+  background-color: black;
 }
 @media only screen and (min-width: 750px) {
   .movies-con .movies-nain-con .movies-card-con .add-watchlist-con .add-watchlist-icon {
