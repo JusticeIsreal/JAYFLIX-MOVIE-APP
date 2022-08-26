@@ -12,7 +12,7 @@ const dynamicBtn = [
 // initial state of all functions
 const initialState = {
   movie: CardPage,
-  
+  watchListCart: [{}],
 };
 
 export const AppContextProvider = ({ children }) => {
@@ -26,10 +26,14 @@ export const AppContextProvider = ({ children }) => {
     }
   };
 
- 
+  const addWatchList = (id) => {
+    dispatch({ type: "ADD_WATCHLIST", payload: id });
+  };
 
   return (
-    <AppContext.Provider value={{ ...state, dynamicBtn, toggleMenu }}>
+    <AppContext.Provider
+      value={{ ...state, dynamicBtn, toggleMenu, addWatchList }}
+    >
       {children}
     </AppContext.Provider>
   );

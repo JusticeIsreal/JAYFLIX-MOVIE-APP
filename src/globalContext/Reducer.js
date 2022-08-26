@@ -4,7 +4,7 @@ const reducer = (state, action) => {
   // menu toggle control
   if (action.type === "MENU_TOGGLE") {
     let newArr = CardData.filter((m) => m.category === action.payload);
-    console.log(newArr);
+    // console.log(newArr);
     return {
       ...state,
       movie: newArr,
@@ -14,6 +14,16 @@ const reducer = (state, action) => {
     return {
       ...state,
       movie: CardData,
+    };
+  }
+  if (action.type === "ADD_WATCHLIST") {
+    let newCart = CardData.filter((film) => film.id === action.payload);
+
+    // console.log([...newCart, ...state.watchListCart]);
+    // console.log({...newCart}, ...state.watchListCart)
+    return {
+      ...state,
+      watchListCart: [...newCart, ...state.watchListCart],
     };
   }
 
