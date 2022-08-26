@@ -92,21 +92,6 @@ body {
   border: 1px solid rgba(245, 245, 245, 0.418);
   background-color: black;
 }
-.movies-con .search-con .search-form button {
-  height: 30px;
-  width: 20%;
-  border-radius: 5px;
-  color: whitesmoke;
-  border: 1px solid rgba(245, 245, 245, 0.418);
-  background-color: black;
-  font-size: 15px;
-  font-weight: 900;
-  transition: all 0.2s linear;
-}
-.movies-con .search-con .search-form button:hover {
-  transform: scale(1.1);
-  background-color: rgba(255, 255, 255, 0.292);
-}
 .movies-con .movies-nain-con {
   padding: 10px 0;
   margin-top: 15px;

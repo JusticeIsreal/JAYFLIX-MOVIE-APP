@@ -1,9 +1,13 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import "../movieCollections/MoviesStyle.css";
 import AppContext from "../../globalContext/AppProvider";
+import { useState } from "react";
 
 function Movies() {
   const { dynamicBtn, movie, toggleMenu } = useContext(AppContext);
+
+  const [search, setSearch] = useState(" ");
 
   return (
     <section className="movies-con">
@@ -18,14 +22,27 @@ function Movies() {
       </div>
       <div className="search-con">
         <form className="search-form">
-          <input type="text" />
-          <button type="button">Search</button>
+          <input
+            type="text"
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Search ..."
+          />
         </form>
       </div>
       <div className="movies-nain-con">
-        {movie.map((m) => (
-          <MoviesCard key={m.id} {...m} />
-        ))}
+        {movie
+          .filter((item) => {
+            if (item.title === "") {
+              return item;
+            } else if (
+              item.title.toLowerCase().includes(search.toLowerCase())
+            ) {
+              return item;
+            }
+          })
+          .map((m) => (
+            <MoviesCard key={m.id} {...m} />
+          ))}
       </div>
     </section>
   );
@@ -33,10 +50,12 @@ function Movies() {
 
 function MoviesCard({ id, title, img, pref }) {
   return (
-    <div className="movies-nain-con2">
-      <img src={img} alt={title} />
-      <p>{title}</p>
-    </div>
+    <Link to={`/dd/${id}`} style={{ color: "whitesmoke" }}>
+      <div className="movies-nain-con2">
+        <img src={img} alt={title} />
+        <p>{title}</p>
+      </div>
+    </Link>
   );
 }
 
