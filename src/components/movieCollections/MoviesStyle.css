@@ -95,11 +95,7 @@ body {
 .movies-con .movies-nain-con {
   padding: 10px 0;
   margin-top: 15px;
-  width: 100%;
   flex-wrap: wrap;
-  overflow: hidden;
-  max-height: 1000px;
-  overflow-y: scroll;
   display: flex;
   justify-content: center;
   align-items: center;

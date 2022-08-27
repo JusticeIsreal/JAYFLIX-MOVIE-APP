@@ -1,7 +1,8 @@
 const recommendedDB = [
   {
     id: 1,
-    img: "/images/cardIMG/movie1.jpg",
+    img: "/images/cardIMG/img16.jpeg",
+
     title: "The Undead",
     pref: "Recommended",
     category: "Romantic",
@@ -19,7 +20,7 @@ const recommendedDB = [
   },
   {
     id: 3,
-    img: "/images/cardIMG/movie3.jpg",
+    img: "/images/cardIMG/movie1.jpg",
     title: "BATMAN",
     pref: "Recommended",
     category: "Scifi",
@@ -37,7 +38,7 @@ const recommendedDB = [
   },
   {
     id: 5,
-    img: "/images/cardIMG/movie5.jpg",
+    img: "/images/cardIMG/img17.jpeg",
     title: "RETURNS",
     pref: "Recommended",
     category: "Action",
@@ -128,6 +129,15 @@ const recommendedDB = [
   {
     id: 15,
     img: "/images/cardIMG/movie15.jpg",
+    title: "I AM LISA",
+    pref: "Recommended",
+    category: "Romantic",
+    description:
+      "lorem20 bbb njkn ghfhg bjkbl v vhch blkjn, vkhvh hvhvl  h gh v,hvhuvk vhuvk bvbuhvbk vkhvkuhv vkuvvukh kvkgv bvkhuvku vkuv vkuhv hbvughv ",
+  },
+  {
+    id: 16,
+    img: "/images/cardIMG/movie1.jpg",
     title: "I AM LISA",
     pref: "Recommended",
     category: "Romantic",

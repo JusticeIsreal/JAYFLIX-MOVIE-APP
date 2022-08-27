@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import CardData from "../../dataPage/CardData"
 import { Link } from "react-router-dom";
 import "../movieCollections/MoviesStyle.css";
 import AppContext from "../../globalContext/AppProvider";
@@ -30,6 +31,7 @@ function Movies() {
             placeholder="Search ..."
           />
         </form>
+        <p>{movie.length }</p>
       </div>
       <div className="movies-nain-con">
         {movie

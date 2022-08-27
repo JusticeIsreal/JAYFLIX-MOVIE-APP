@@ -74,7 +74,7 @@ $special-Color: #4c5eff;
     }
   }
 }
-
+// watch list ontainer
 .watchList-con {
   border: 2px solid whitesmoke;
   width: 90%;
@@ -91,6 +91,7 @@ $special-Color: #4c5eff;
   border-radius: 10px;
   animation: ss 0.3s linear;
 
+  // animation for enterance styling
   @keyframes ss {
     0% {
       transform: scale(0.5);
@@ -99,15 +100,19 @@ $special-Color: #4c5eff;
       transform: scale(1);
     }
   }
-
+  // display for larger and landscape devices
   @include responsive(bigphone) {
     @include flexDisplay(center, center, row);
-    top: 22%;
+    top: 20%;
     flex-wrap: wrap;
-    max-width: 1300px;
+    // max-width: 1300px;
     height: 75%;
   }
+  @include responsive(landscape) {
+    top: 22%;
+  }
 
+  // icon to remove container
   .remove-watchlist-con-icon {
     margin-left: 85%;
     position: fixed;
@@ -119,18 +124,22 @@ $special-Color: #4c5eff;
 
     @include responsive(bigphone) {
       margin-left: 45%;
-      top: 24%;
+      top: 22%;
       position: fixed;
       font-size: 40px;
     }
+
+    @include responsive(landscape) {
+      top: 24%;
+    }
   }
 
+  // resspective items
   .watchList-item {
     border: 1px solid rgba(245, 245, 245, 0.405);
     @include flexDisplay(space-between, center, column);
     border-radius: 5px;
     padding: 8px 5px;
-    // width: 105px;
     height: 150px;
     position: relative;
     margin: 10px;
@@ -141,6 +150,12 @@ $special-Color: #4c5eff;
       border-radius: 10px;
       padding: 8px;
     }
+
+    @include responsive(landscape) {
+      width: 40%;
+    }
+
+    // remove individual items
     .remove-watchlist-con {
       position: absolute;
       right: 10px;
@@ -151,6 +166,7 @@ $special-Color: #4c5eff;
       }
     }
 
+    // detail container
     .watchlist-main-con2 {
       @include flexDisplay(space-between, center, row);
       //  border: 1px solid red;
@@ -179,6 +195,7 @@ $special-Color: #4c5eff;
         }
       }
 
+      // movie description and title
       .span {
         // border: 2px solid green;
         width: 65%;

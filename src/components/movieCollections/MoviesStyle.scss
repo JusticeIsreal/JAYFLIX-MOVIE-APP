@@ -133,14 +133,14 @@ $special-Color: #4c5eff;
     }
   }
   .movies-nain-con {
-    //  border: 2px solid red;
+    // border: 2px solid red;
     padding: 10px 0;
     margin-top: 15px;
-    width: 100%;
+    // width: 100%;
     flex-wrap: wrap;
-    overflow: hidden;
-    max-height: 1000px;
-    overflow-y: scroll;
+    // overflow: hidden;
+    // max-height: 1000px;
+    // overflow-y: scroll;
     @include flexDisplay(center, center, row);
 
     // @include responsive(bigphone) {
