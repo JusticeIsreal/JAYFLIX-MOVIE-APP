@@ -36,7 +36,7 @@ function RecommendDisplay() {
           <div className="movie-download">
             <button>
               <ImDownload className="download-icon" />
-              Douwnload
+              <a href={fullDetails.download}> Douwnload </a>
             </button>
           </div>
         </div>

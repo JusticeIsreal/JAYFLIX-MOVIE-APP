@@ -141,7 +141,7 @@ $special-Color: #4c5eff;
     // overflow: hidden;
     // max-height: 1000px;
     // overflow-y: scroll;
-    @include flexDisplay(center, center, row);
+    @include flexDisplay(space-around, center, row);
 
     // @include responsive(bigphone) {
     // }
